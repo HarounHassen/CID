@@ -1,0 +1,19 @@
+<body>
+     <div class="container">
+          <div class="card">
+               <div >
+                    <img src="../assets/images/padlock.png" alt="">
+               </div>
+               <div style="margin: 5px 5px 5px 5px;">
+                    <h4>Mot de passe oublié ?</h4>
+               </div>
+               <div style="margin: 5px 5px 5px 5px;">
+                    <p>Veuillez entrer votre adresse Email !</p>
+               </div>
+               <p [ngClass]="{ 'error': isEmailEmpty }">{{emailLabel}}</p>
+               <input type="email" placeholder="Email" [(ngModel)]="email" ><br>
+               <button class="btn" (click)="isEmpty()" [routerLink]="['code-verification']" >Réinitialisation le mot de passe</button>
+          </div>
+
+     </div>
+</body>
